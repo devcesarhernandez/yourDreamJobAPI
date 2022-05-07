@@ -31,6 +31,11 @@ const userScehema = new Schema({
 		type: String,
 		required: true
 	},
+	role: {
+		type: String,
+		required: true,
+		enum: ["admin", "employer", "aspirant"]
+	},
 	verifyHas: {
 		type: String,
 		unique: true
