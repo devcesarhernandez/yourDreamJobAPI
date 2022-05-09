@@ -1,7 +1,7 @@
 const mongoose =  require("mongoose")
 const Schema = mongoose.Schema
 
-const userScehema = new Schema({
+const userSchema = new Schema({
 	name: {
 		type: String,
 		required: true,
@@ -11,9 +11,6 @@ const userScehema = new Schema({
 		type: String,
 		required: true,
 		trim: true
-	},
-	role: {
-		type: String
 	},
 	email: {
 		type: String,
@@ -36,7 +33,7 @@ const userScehema = new Schema({
 		required: true,
 		enum: ["admin", "employer", "aspirant"]
 	},
-	verifyHas: {
+	verifyHash: {
 		type: String,
 		unique: true
 	},
